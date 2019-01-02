@@ -6,11 +6,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EmployeeTest {
+public class MemberTest {
 
     @Before
     public void setUp() throws Exception {
-        Employee employee = new Employee();
+        Member employee = new Member();
     }
 
     @After
@@ -162,6 +162,33 @@ public class EmployeeTest {
         assertEquals(expectedValue, actualValue);
     }
 
+    @Test
+    public void getAgePass (){
+
+        //Arrange
+        Boolean nameSet = employee.setAge("25");
+        int expectedValue = 25;
+
+        //Act
+        int actualValue = employee.getAge();
+
+        //Assert
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    public void getSalaryPass (){
+
+        //Arrange
+        Boolean nameSet = employee.setSalary(1200);
+        int expectedValue = 1200;
+
+        //Act
+        int actualValue = employee.getSalary();
+
+        //Assert
+        assertEquals(expectedValue, actualValue);
+    }
 
 
 }

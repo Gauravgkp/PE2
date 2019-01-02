@@ -1,4 +1,4 @@
 package com.boeing.PE2;
 
-public class Employee {
+public class Member {
 }
