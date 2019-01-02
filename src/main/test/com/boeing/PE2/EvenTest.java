@@ -21,7 +21,7 @@ public class EvenTest {
     @Test
     public void isEvenPass{
         //Arrange
-        Boolean expectedValue =True;
+        Boolean expectedValue =true;
 
         //Act
         Boolean actualValue = even.isEven(28);
@@ -36,7 +36,7 @@ public class EvenTest {
         Boolean expectedValue =false;
 
         //Act
-        Boolean actualValue = even.isEven(28);
+        Boolean actualValue = even.isEven(27);
 
         //Assert
         assertEquals(expectedValue, actualValue);
