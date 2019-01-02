@@ -6,42 +6,39 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class MemberVarTest {
+public class EvenTest {
 
     @Before
     public void setUp() throws Exception {
-        MemberVar employee1 = new MemberVar();
+        Even even = new Even();
     }
 
     @After
     public void tearDown() throws Exception {
-        employee1 = null;
+        even = null;
     }
 
     @Test
-    public void instantiateInitialisePass() {
-
+    public void isEvenPass{
         //Arrange
-        boolean expectedValue =true;
+        Boolean expectedValue =True;
 
         //Act
-        boolean actualValue = employee1.instantiateInitialise("abcd", 25, 12000);
+        Boolean actualValue = even.isEven(28);
 
         //Assert
         assertEquals(expectedValue, actualValue);
     }
 
     @Test
-    public void displayPass() {
-
+    public void isEvenFail{
         //Arrange
-        boolean expectedValue =true;
+        Boolean expectedValue =false;
 
         //Act
-        boolean actualValue = employee1.display();
+        Boolean actualValue = even.isEven(28);
 
         //Assert
         assertEquals(expectedValue, actualValue);
     }
-
 }
