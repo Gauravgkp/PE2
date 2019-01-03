@@ -1,13 +1,12 @@
-package com.boeing.PE2;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class RootTest {
 
+public class RootTest {
+    Root root = new Root();
     @Before
     public void setUp() throws Exception {
         Root root = new Root();
@@ -25,7 +24,7 @@ public class RootTest {
         boolean expectedValue=false;
 
         //Act
-        boolean actualValue = root.isNumber("gfedcba");
+        boolean actualValue = root.isNumber("1234567");
 
         //Assert
         assertEquals(expectedValue, actualValue);
@@ -35,10 +34,10 @@ public class RootTest {
     public void inputIsNumberPass() {
 
         //Arrange
-        boolean expectedValue=true;
+        boolean expectedValue=false;
 
         //Act
-        boolean actualValue = root.isNumber("1234567");
+        boolean actualValue = root.isNumber("gfedcba");
 
         //Assert
         assertEquals(expectedValue, actualValue);

@@ -1,22 +1,23 @@
-package com.boeing.PE2;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+        import static org.junit.Assert.*;
 
 public class PalindromeTest {
+    Palindrome palindrome = new Palindrome();
 
-    @Before
+    @org.junit.Before
     public void setUp() throws Exception {
         Palindrome palindrome = new Palindrome();
     }
 
-    @After
+    @org.junit.After
     public void tearDown() throws Exception {
-        palindrome = null ;
+        palindrome=null;
     }
+
+
 
     @Test
     public void reverseInputPass() {
@@ -35,10 +36,10 @@ public class PalindromeTest {
     public void isPalindromeTestPass() {
 
         //Arrange
-        String expectedValue="abcdcba is a palindrome input";
+        String expectedValue="abcdcba";
 
         //Act
-        String actualValue = palindrome.checkPalindrome("abcdcba");
+        String actualValue = palindrome.checkpalindrome("abcdcba");
 
         //Assert
         assertEquals(expectedValue, actualValue);
@@ -48,13 +49,12 @@ public class PalindromeTest {
     public void isPalindromeTestFail() {
 
         //Arrange
-        String expectedValue="abcdefg is a palindrome input";
+        String expectedValue="abcdefg";
 
         //Act
-        String actualValue = palindrome.checkPalindrome("abcdefg");
+        String actualValue = palindrome.checkpalindrome("abcdefg");
 
         //Assert
-        assertEquals(expectedValue, actualValue);
+        assertNotEquals(expectedValue, actualValue);
     }
-
 }
